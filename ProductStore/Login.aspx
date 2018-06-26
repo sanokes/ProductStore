@@ -11,6 +11,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+       
         <asp:Label ID="Label1" runat="server" Text="UserName" BackColor="White" BorderColor="White" ForeColor="Black"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
@@ -20,7 +21,7 @@
         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
         </p>
         <p>
-            <asp:Label ID="Label3" runat="server" ForeColor="Red" Text="Label" Visible="False"></asp:Label>
+             <asp:Label runat="server" ID="Label3" ForeColor="Red" Visible="False">Invalid User Name or Password</asp:Label>
         </p>
         <p style="margin-left: 80px">
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" BackColor="Black" ForeColor="#66FF33" Height="23px" Width="91px" />

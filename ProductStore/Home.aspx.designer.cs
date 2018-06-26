@@ -7,7 +7,7 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace WebApplication3 {
+namespace ProductStore {
     
     
     public partial class Home {
