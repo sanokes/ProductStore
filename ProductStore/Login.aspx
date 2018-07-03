@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebApplication3.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="ProductStore.Login" %>
 
 <!DOCTYPE html>
 
@@ -10,21 +10,21 @@
          </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="LoginForm" runat="server">
        
-        <asp:Label ID="Label1" runat="server" Text="UserName" BackColor="White" BorderColor="White" ForeColor="Black"></asp:Label>
+        <asp:Label ID="lblInvalidUserName" runat="server" Text="UserName" BackColor="White" BorderColor="White" ForeColor="Black"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
         <p>
-        <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
+        <asp:Label ID="lblInvalidPassword" runat="server" Text="Password"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
         </p>
         <p>
-             <asp:Label runat="server" ID="Label3" ForeColor="Red" Visible="False">Invalid User Name or Password</asp:Label>
+             <asp:Label runat="server" ID="lblERROR" ForeColor="Red" Visible="False">Invalid User Name or Password</asp:Label>
         </p>
         <p style="margin-left: 80px">
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" BackColor="Black" ForeColor="#66FF33" Height="23px" Width="91px" />
+        <asp:Button ID="btnLogin" runat="server" OnClick="Button1_Click" Text="Login" BackColor="Black" ForeColor="#66FF33" Height="23px" Width="91px" />
         </p>
     </form>
 </body>

@@ -5,9 +5,9 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Web.Configuration;
 
-namespace WebApplication3
+namespace ProductStore
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class Login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,11 +16,13 @@ namespace WebApplication3
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
-                 con.Open();
+            // SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
+                string dbConnection = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
+                SqlConnection con = new SqlConnection(dbConnection);
+                con.Open();
                 SqlCommand cmd = new SqlCommand("select * from Users where UserName=@username and Password =@password", con);
-                cmd.Parameters.AddWithValue("@username", TextBox1.Text);
-                cmd.Parameters.AddWithValue("@password", TextBox2.Text);
+                cmd.Parameters.AddWithValue("@username", txtUserName.Text);
+                cmd.Parameters.AddWithValue("@password", txtPassword.Text);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -31,8 +33,8 @@ namespace WebApplication3
                   }
                 else
                 {
-                     Label3.Visible = true;
-                     Label3.Text = "Invalid User Name or Password";
+                     lblERROR.Visible = true;
+                     lblERROR.Text = "Invalid User Name or Password";
                         
                 }
         }
