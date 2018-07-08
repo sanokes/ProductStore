@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Data;
-using System.Web.UI.WebControls;
 using System.Data.SqlClient;
-using System.Web.Configuration;
 
 namespace ProductStore
 {
@@ -29,13 +27,12 @@ namespace ProductStore
                 cmd.ExecuteNonQuery();
                 if (dt.Rows.Count > 0)
                  {
-              Response.Redirect("~/Home.aspx");
-                  }
+                         Response.Redirect("~/Home.aspx");
+                 }
                 else
                 {
                      lblERROR.Visible = true;
-                     lblERROR.Text = "Invalid User Name or Password";
-                        
+                     lblERROR.Text = "Invalid User Name or Password";   
                 }
         }
            
