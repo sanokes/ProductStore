@@ -103,9 +103,25 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="UsersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="UsersDataSet.xsc">
+      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="UsersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UsersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="UsersDataSet.xss">
+      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
