@@ -1,42 +1,8 @@
-﻿//------------------------------------------------------------------------------
-// <автоматически создаваемое>
-//     Этот код создан программой.
-//
-//     Изменения в этом файле могут привести к неправильной работе и будут потеряны в случае
-//     повторной генерации кода. 
-// </автоматически создаваемое>
-//------------------------------------------------------------------------------
-
-namespace ProductStore {
-    
-    
-    public partial class Home {
-        
-        /// <summary>
-        /// form1 элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// Label1 элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginName Label1;
-        
-        /// <summary>
-        /// Label4 элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+﻿namespace ProductStore {
+ 
+   public partial class Home {
+    protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+    protected global::System.Web.UI.WebControls.LoginName Label1;
+      protected global::System.Web.UI.WebControls.Label Label4;
     }
 }

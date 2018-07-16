@@ -7,9 +7,7 @@
 </head>
 <body>
     <p style="margin-left: 480px">
-        &nbsp;</p>
-    <p style="margin-left: 480px">
-        <label>Hello <%=HttpContext.Current.User.Identity.Name %></label> 
+        <label id="Welcom">Hello <%=HttpContext.Current.User.Identity.Name %></label> 
     </p>
 </body>
 </html>
