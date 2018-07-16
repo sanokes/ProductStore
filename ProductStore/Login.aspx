@@ -18,7 +18,7 @@
 
         <p><asp:Label ID="lblInvalidPassword" runat="server" Text="Password"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox></p>
+        <asp:TextBox ID="txtPassword" runat="server"  TextMode="Password"></asp:TextBox></p>
 
         <p><asp:Label runat="server" ID="lblERROR" ForeColor="Red" Visible="False">Invalid User Name or Password</asp:Label></p>
 

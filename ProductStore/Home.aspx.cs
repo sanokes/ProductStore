@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WebApplication3
+namespace ProductStore
 {
     public partial class Home : System.Web.UI.Page
     {

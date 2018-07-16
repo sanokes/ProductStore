@@ -10,7 +10,7 @@ namespace ProductStore
     public string UserName { get; }
     public string Password { get; }
 
-    public static void GetByCredentials(string userName, string password)
+    public static void GetByCredentials(string UserName, string Password)
     {
     }
 
