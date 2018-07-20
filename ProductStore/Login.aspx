@@ -13,7 +13,7 @@
     <form id="LoginForm" runat="server">
        
         <asp:Label ID="lblInvalidUserName" runat="server" Text="UserName" BackColor="White" BorderColor="White" ForeColor="Black"></asp:Label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
         <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
 
         <p><asp:Label ID="lblInvalidPassword" runat="server" Text="Password"></asp:Label>
@@ -26,3 +26,4 @@
     </form>
 </body>
 </html>
+/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/

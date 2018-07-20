@@ -12,15 +12,20 @@ namespace ProductStore
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection scn = new SqlConnection();
-            scn.ConnectionString = @"Data Source=UNKNOWN;Initial Catalog=Users;database=MYDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            SqlCommand scmd = new SqlCommand("select count (*) as cnt from Users where UserName=@usr and Password=@pwd", scn);
-            scmd.Parameters.Clear();
-            scmd.Parameters.AddWithValue("@usr", txtUserName.Text);
-            scmd.Parameters.AddWithValue("@pwd", txtPassword.Text);
-            scn.Open();
+          /*  var user = User.GetByCredentials(txtUserName.Text, txtPassword.Text);
+            if (user != null)
+            {
+                Response.Redirect("~/Home.aspx");
+            }*/
 
-            if (scmd.ExecuteScalar().ToString() == "1")
+            SqlConnection con = new SqlConnection("Data Source=UNKNOWN;Initial Catalog=Users;database=MYDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            SqlCommand cmd = new SqlCommand("select count (*) as cnt from Users where UserName=@usr and Password=@pwd", con);
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@usr", txtUserName.Text);
+            cmd.Parameters.AddWithValue("@pwd", txtPassword.Text);
+            con.Open();
+
+            if (cmd.ExecuteScalar().ToString() == "1")
             {
                 Response.Redirect("~/Home.aspx");
             }
@@ -31,7 +36,7 @@ namespace ProductStore
                 txtUserName.Text = "";
                 txtPassword.Text = "";
              }
-            scn.Close();
+            con.Close();
 
         }
     }
