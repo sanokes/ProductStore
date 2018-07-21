@@ -5,21 +5,17 @@ namespace ProductStore
 {
     public partial class Login : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e){}
+        protected void Loginbtn(object sender, EventArgs e)
         {
-           
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-          /*  var user = User.GetByCredentials(txtUserName.Text, txtPassword.Text);
-            if (user != null)
-            {
-                Response.Redirect("~/Home.aspx");
-            }*/
-
             SqlConnection con = new SqlConnection("Data Source=UNKNOWN;Initial Catalog=Users;database=MYDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             SqlCommand cmd = new SqlCommand("select count (*) as cnt from Users where UserName=@usr and Password=@pwd", con);
+            /*  var user = User.GetByCredentials(txtUserName.Text, txtPassword.Text);
+           if (user != null)
+           {
+               Response.Redirect("~/Home.aspx");
+           }*/
+
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@usr", txtUserName.Text);
             cmd.Parameters.AddWithValue("@pwd", txtPassword.Text);
@@ -29,10 +25,10 @@ namespace ProductStore
             {
                 Response.Redirect("~/Home.aspx");
             }
-            else
+             else
              {
-                lblERROR.Visible = true;
-                lblERROR.Text = "Invalid User Name or Password";
+                 lblInvalidCredentials.Visible = true;
+                 lblInvalidCredentials.Text = "Invalid User Name or Password";
                 txtUserName.Text = "";
                 txtPassword.Text = "";
              }
@@ -40,5 +36,4 @@ namespace ProductStore
 
         }
     }
-    
 }
