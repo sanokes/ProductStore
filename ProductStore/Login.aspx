@@ -8,7 +8,7 @@
     <title></title>
     </head>
 <body>
-    <form id="LoginForm" runat="server">
+    <form id="LoginForm" runat="server" autocomplete="off">
        
         <asp:Label ID="lblInvalidUserName" runat="server" Text="UserName" BackColor="White" BorderColor="White" ForeColor="Black"></asp:Label>
         <br />

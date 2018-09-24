@@ -20,6 +20,9 @@ namespace ProductStore.Core
             {
                 return WebConfigurationManager.ConnectionStrings["UsersConnectionString"].ConnectionString;
             }
+            set {
+                
+            }
         }
 
          public static User GetByCredentials(string userName, string password)

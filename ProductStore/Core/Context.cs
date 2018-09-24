@@ -7,6 +7,7 @@ namespace ProductStore.Core
 {
     public class Context
     {
+
         public static User User
         {
             get
