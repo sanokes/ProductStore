@@ -1,0 +1,7 @@
+
+CREATE PROCEDURE GetByUserName
+	@UserName varchar(64) output
+AS
+SELECT * FROM Users
+Where @UserName = UserName
+return
